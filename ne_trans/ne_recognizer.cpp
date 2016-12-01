@@ -8,11 +8,11 @@
 #include "ne_recognizer.h"
 
 ne_recognizer::ne_recognizer() {
-	// TODO Auto-generated constructor stub
+}
 
+ne_recognizer::ne_recognizer(ne_recognizer_resource* _ne_res) : ne_res_(_ne_res) {
 }
 
 ne_recognizer::~ne_recognizer() {
-	// TODO Auto-generated destructor stub
 }
 
