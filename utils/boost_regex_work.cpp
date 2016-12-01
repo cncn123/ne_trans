@@ -5,6 +5,7 @@
  *      Author: parallels
  */
 #include "boost_regex_work.h"
+#include "wchar_converter.h"
 #define INIT_ws_LEN 200
 #define INIT_re_LEN 100
 
@@ -28,11 +29,15 @@ normal_regulation_regex::~normal_regulation_regex(){
 }
 
 bool normal_regulation_regex::make_regex(const string& input_re){
-	boost::u32regex wr=boost::make_u32regex(input_re);
-	if(wr==NULL){
+	if(!(wchar_converter::utf8_to_wchar(input_re, s))){
 		return false;
 	}
 	return true;
+	/*boost::u32regex wr=boost::make_u32regex(input_re);
+	if(wr==NULL){
+		return false;
+	}
+	return true;*/
 }
 
 bool normal_regulation_regex::unicode_convert(const string& input_ws){
