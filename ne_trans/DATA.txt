@@ -1,0 +1,1 @@
+(\s*(\d|\p{InCnDigit}){2,4}\s*)年(\s*(\d|\p{InCnDigit}){1,2}\s*)月(\s*(\d|\p{InCnDigit}){1,3}\s*)(日|号)	DATE:Year=1;Mon=2;Day=3
